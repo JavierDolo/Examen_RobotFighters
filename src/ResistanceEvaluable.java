@@ -1,3 +1,3 @@
 public interface ResistanceEvaluable {
-    boolean esAptoParaResistencia();
+    boolean isFitForResistance();
 }

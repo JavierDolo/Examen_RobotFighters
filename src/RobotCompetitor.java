@@ -1,6 +1,4 @@
-
-    public interface RobotCompetitor {
-        String getTechnicalDescription();
-        String getFabricante();
-    }
-
+public interface RobotCompetitor {
+    String getTechnicalDescription();
+    Maker getMaker();
+}

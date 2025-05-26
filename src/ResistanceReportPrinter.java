@@ -2,14 +2,16 @@ import java.util.List;
 
 public class ResistanceReportPrinter {
     public void printReport(List<ResistanceEvaluable> robots) {
-        System.out.println("=== Resilience Test Reports ===");
+        System.out.println("=== Resistance Test Reports ===");
         for (ResistanceEvaluable robot : robots) {
-            if (robot instanceof Land) {
-                System.out.println(((Land) robot).nombre + ": tracción ORUGAS confirmada. Apto para la competición.");
-            } else if (robot instanceof Air) {
-                System.out.println(((Air) robot).nombre + ": autonomía de " + (((Air) robot).getAutonomiaVuelo()) + " minutos. Apto para la competición.");
+            if (robot instanceof LandRobot land) {
+                System.out.println(land.name + ": traction " + land.getTractionType() +
+                        " confirmed. Fit for competition.");
+            } else if (robot instanceof AirRobot air) {
+                System.out.println(air.name + ": flight autonomy of "
+                        + air.getFlightAutonomy() + " minutes. Fit for competition.");
             } else {
-                System.out.println("No cumple los requisitos.");
+                System.out.println("Does not meet the requirements.");
             }
         }
     }
