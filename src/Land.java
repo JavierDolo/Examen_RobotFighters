@@ -10,6 +10,10 @@ public class Land extends Robot implements ResistanceEvaluable {
         this.velocidadMaxima = velocidadMaxima;
     }
 
+    public int getVelocidadMaxima() {
+        return velocidadMaxima;
+    }
+
     @Override
     public String getTechnicalDescription() {
         return nombre + ", fabricado por " + fabricante + " en " + anioFabricacion + ", usa tracción " + tipoTraccion + " y alcanza hasta " + velocidadMaxima + " km/h.";

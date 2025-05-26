@@ -1,5 +1,5 @@
 
-    import java.time.LocalDate;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
             // Filtrar robots terrestres con velocidad mayor a X km/h
             int velocidadMinima = 30;
             List<Land> rapidos = robots.stream()
-                    .filter(r -> r instanceof Land && ((Land) r).getVelocidadMaxima > velocidadMinima)
+                    .filter(r -> r instanceof Land && ( ((Land) r).getVelocidadMaxima()) > velocidadMinima)
                     .map(r -> (Land) r)
-                    .collect(Collectors.toList());
+                    .toList();
 
             System.out.println("\nRobots terrestres con velocidad mayor a " + velocidadMinima + " km/h:");
             rapidos.forEach(r -> System.out.println(r.getTechnicalDescription()));
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
             String fabricanteBuscado = "AeroDynam";
             List<RobotCompetitor> filtradosPorFabricante = robots.stream()
                     .filter(r -> r.getFabricante().equalsIgnoreCase(fabricanteBuscado))
-                    .collect(Collectors.toList());
+                    .toList();
 
             System.out.println("\nRobots del fabricante " + fabricanteBuscado + ":");
             filtradosPorFabricante.forEach(r -> System.out.println(r.getTechnicalDescription()));
@@ -43,4 +43,5 @@ import java.util.stream.Collectors;
             printer.printReport(evaluables);
         }
     }
-}
+
+

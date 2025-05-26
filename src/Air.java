@@ -10,6 +10,10 @@ public class Air extends Robot implements ResistanceEvaluable {
         this.autonomiaVuelo = autonomiaVuelo;
     }
 
+    public int getAutonomiaVuelo() {
+        return autonomiaVuelo;
+    }
+
     @Override
     public String getTechnicalDescription() {
         return nombre + " vuela hasta " + altitudMaxima + " m durante " + autonomiaVuelo + " minutos. Fabricado en " + anioFabricacion + " por " + fabricante + ".";
@@ -18,9 +22,6 @@ public class Air extends Robot implements ResistanceEvaluable {
     public boolean esAptoParaResistencia() {
         return autonomiaVuelo >= 60;
     }
-    @Override
-    public boolean esAptoParaResistencia() {
-        return autonomiaVuelo >= 60;
-    }
+
 
 }
