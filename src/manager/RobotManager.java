@@ -1,3 +1,15 @@
+package manager;
+
+import enums.Maker;
+import enums.PropulsionType;
+import enums.TractionType;
+import interfices.ResistanceEvaluable;
+import interfices.RobotCompetitor;
+import printers.ResistanceReportPrinter;
+import robots.AirRobot;
+import robots.LandRobot;
+import robots.WaterRobot;
+
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;

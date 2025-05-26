@@ -1,3 +1,8 @@
+package robots;
+
+import enums.Maker;
+import interfices.ResistanceEvaluable;
+
 import java.time.LocalDate;
 import java.time.Year;
 

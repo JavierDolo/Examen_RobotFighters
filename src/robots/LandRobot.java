@@ -1,3 +1,9 @@
+package robots;
+
+import enums.Maker;
+import enums.TractionType;
+import interfices.ResistanceEvaluable;
+
 import java.time.LocalDate;
 import java.time.Year;
 

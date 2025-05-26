@@ -1,3 +1,6 @@
+import enums.Maker;
+import manager.RobotManager;
+
 public class Main {
     public static void main(String[] args) {
         RobotManager manager = new RobotManager();

@@ -1,3 +1,8 @@
+package robots;
+
+import enums.Maker;
+import interfices.RobotCompetitor;
+
 import java.time.LocalDate;
 import java.time.Year;
 
@@ -12,6 +17,18 @@ public abstract class Robot implements RobotCompetitor {
         this.maker = maker;
         this.manufacturingYear = manufacturingYear;
         this.registrationDate = registrationDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Year getManufacturingYear() {
+        return manufacturingYear;
+    }
+
+    public LocalDate getRegistrationDate() {
+        return registrationDate;
     }
 
     @Override
